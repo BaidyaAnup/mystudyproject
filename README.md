@@ -23,3 +23,7 @@ Things you may want to cover:
 
 * ...
 =======
+
+https://github.com/bradtraversy/modern_js_udemy_projects
+
+for javascript learning.

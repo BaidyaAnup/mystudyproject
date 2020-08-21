@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :admins
   # get 'notes/new'
   # get 'notes/create'
   resources :employees do
