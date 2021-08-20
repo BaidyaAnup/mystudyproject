@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
   def index
+    @users = User.search(params)
   end
+
+
 
   def new
   	@user = User.new
@@ -13,6 +16,11 @@ class UsersController < ApplicationController
   	else
   		render "new"
   	end
+  end
+
+  def report
+    ReportWorker.perform_async("20-08-2020","25-08-2020")
+    render plain: "REQUEST TO GENERATE REPORT ADDED TO THE QUEUE"
   end
 
   def edit

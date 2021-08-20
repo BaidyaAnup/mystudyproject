@@ -1,0 +1,18 @@
+<%= form_with url: users_path, data: {remote: false}, method: :get do |f| %>
+  <div class="form-row align-items-center">
+    <div class="col-sm-3 my-1">
+      <%= search_field_tag(:first_name,'', class: "form-control", placeholder: "First name")%>
+      <div class="pos" id="autocomplete-firstname"></div>
+    </div>
+    <div class="col-sm-3 my-1">
+      <%= search_field_tag(:last_name,'', class: "form-control", placeholder: "Last name") %>
+      <div class="pos" id="autocomplete-lastname"></div>
+    </div>
+    <div class="col-auto my-1">
+      <%= button_tag 'Submit', class: "btn btn-primary" %>
+    </div>
+  </div>  
+<% end %>
+
+
+

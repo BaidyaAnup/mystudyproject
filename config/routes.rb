@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  require 'sidekiq/web'
+  mount Sidekiq::Web => '/sidekiq'
   devise_for :admins
   # get 'notes/new'
   # get 'notes/create'
@@ -14,6 +17,16 @@ Rails.application.routes.draw do
   get 'users/new'
   get 'users/edit'
   get 'users/show'
+  get 'users/report'
+
+#get ':username', to: 'users#show', as: :user
+
+
+
+resources :photos do
+  get 'preview', on: :member
+end
+  #get 'users/search', to: 'users#search'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :users do 
   	resources :emergencies, controller: :contacts, type: 'Emergency'

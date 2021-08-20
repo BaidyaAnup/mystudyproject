@@ -25,6 +25,10 @@ development:
   <<: *default
   database: mystudyproject_development
 
+  #postgres=# create role anup with createdb login password 'rails6';
+  # role: anup
+  # password: rails6
+
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
