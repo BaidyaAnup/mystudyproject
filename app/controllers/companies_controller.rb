@@ -1,7 +1,10 @@
 class CompaniesController < ApplicationController
   before_action :set_company, only: [:show, :edit, :update, :destroy]
 
+<<<<<<< HEAD
 #this is to be revver first
+=======
+>>>>>>> parent of 4b80ee9... x
   # GET /companies
   # GET /companies.json
   def index
