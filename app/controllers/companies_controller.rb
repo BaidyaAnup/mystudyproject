@@ -2,7 +2,6 @@ class CompaniesController < ApplicationController
   before_action :set_company, only: [:show, :edit, :update, :destroy]
 
 #this is to be revver first
-  #this is revert second
   # GET /companies
   # GET /companies.json
   def index
