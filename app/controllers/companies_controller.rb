@@ -1,6 +1,6 @@
 class CompaniesController < ApplicationController
   before_action :set_company, only: [:show, :edit, :update, :destroy]
-#this is testt commict
+
   # GET /companies
   # GET /companies.json
   def index
